@@ -19,3 +19,4 @@
 #IDE files
 /.idea
 /.vscode
+/__pycache__
