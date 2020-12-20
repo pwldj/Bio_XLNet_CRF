@@ -1,15 +1,15 @@
-# BioNER with XLNet-CRF
+## BioNER with XLNet-CRF
 
 This repository provides the code for fine-tuning Shared Labels and Dynamic Splicing model on XLNet-CRF network backbone.
 two noise reduction learning approach for biomedical named entity recognition.
 
-##download
+###download
 
 You can download all datasets we used at https://github.com/cambridgeltl/MTL-Bioinformatics-2016. Pre-training models have been made available at https://storage.googleapis.com/xlnet/released_models/cased_L-24_H-1024_A-16.zip
 
 Considering that the training checkpoint is too big(over 2TB), in the future we will choose some of them to upload.
 
-##Installation
+###Installation
 
 This section describe the installation on Tensorflow 1.X. 
 We highly recommend using GPU with more than 16GB memory and tensorFlow GPU support requires can be found at https://www.tensorflow.org/install/gpu and https://www.tensorflow.org/install/source#gpu.
@@ -18,7 +18,7 @@ We only test Tensorflow 1.14 and 1.15 and version 1.15.2 is recommended. all req
 
     pip install -r requirements.txt
 
-##Preprocessing
+###Preprocessing
 
 Datasets preprocessing code is in create_data.py. In order to execute comparison experiments and ablation studies we generated 3 types of label: label_id, label_x_id and label_gather and 2 types of label mask: label_mask_x and label_mask_gather.
 Label_index is used to record the position of each label.
@@ -33,7 +33,7 @@ Here is an example of them:
 * label_mask_gather: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ...
 * label_index: 0, 5, 7, 9, 11, 13, 14, 17, 19, 21, 22 ...
 
-##Fine-tuning
+###Fine-tuning
 
 You can do fine-tuning by:
 
@@ -76,7 +76,7 @@ Here is different train model modified by training parameters:
 | Dynamic Splicing without CRF | True | gather | gather |
 | Label [X] with CRF | False | X | normal |
 
-##Result
+###Result
 
 You can find all result including evaluated and prediction at `predict_dir`.
 Evaluated will be like this:
@@ -95,6 +95,6 @@ Prediction result will be like:
     accuracy:  98.85%; precision:  90.78%; recall:  89.82%; FB1:  90.30
               Anatomy: precision:  90.78%; recall:  89.82%; FB1:  90.30  4567
               
-##License and Disclaimer
+###License and Disclaimer
 
 Please see the LICENSE file for details. Downloading data indicates your acceptance of our disclaimer.
