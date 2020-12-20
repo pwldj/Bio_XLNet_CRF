@@ -1,0 +1,16 @@
+/predict*
+/mynet_medical.zip
+/*.txt
+/crf_util_multi_task.py
+/run_crf_multi_task.py
+/*.pdf
+/*.csv
+/sbatch.sh
+/propre.py
+/*.xls
+/fun.py
+/model_dir/*
+/cache/*
+/data/*
+/.idea
+/.vscode
