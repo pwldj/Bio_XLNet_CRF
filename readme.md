@@ -50,8 +50,8 @@ You can do fine-tuning by:
     --max_save=5 \
     --train_steps=${step} \
     --warmup_steps=0 \
-    --cache_dir=cache \
-    --predict_dir=predict \
+    --cache_dir=${cache} \
+    --predict_dir=${result} \
     --label_mode=gather \
     --label_mask=gather \
     --task=${task} \
@@ -69,7 +69,7 @@ Here is different train model modified by training parameters:
 | Dynamic Splicing without CRF | True | gather | gather |
 | Label [X] with CRF | False | X | normal |
 
-##result
+##Result
 You can find all result including evaluated and prediction at `predict_dir`.
 Evaluated will be like this:
 

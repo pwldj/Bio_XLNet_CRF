@@ -1,16 +1,21 @@
+#io files
 /predict*
-/mynet_medical.zip
-/*.txt
-/crf_util_multi_task.py
-/run_crf_multi_task.py
-/*.pdf
-/*.csv
-/sbatch.sh
-/propre.py
-/*.xls
-/fun.py
 /model_dir/*
 /cache/*
 /data/*
+#temp files or irrelevant files
+/*.zip
+/*.txt
+/*.pdf
+/*.csv
+/*.xls
+#multi task code
+/crf_util_multi_task.py
+/run_crf_multi_task.py
+#test codes
+/sbatch.sh
+/propre.py
+/fun.py
+#IDE files
 /.idea
 /.vscode
